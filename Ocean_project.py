@@ -1,7 +1,10 @@
+"""Designed for scrolling on macbook, might not work on other devices
+Được thiết kế cho việc lướt trên macbook, có thể không lướt được trên các thiết bị khác"""
+
 import tkinter as tk 
 
 root = tk.Tk() 
-root.title("Ocean explorer - Made by Mai Gia Linh") 
+root.title("Deep sea simulator - Made by Mai Gia Linh") 
 root.geometry("1600x900") 
 
 canvas = tk.Canvas(root, bg="white", highlightthickness=0) 
@@ -15,41 +18,43 @@ sky.pack(fill="x")
 
 tk.Label( 
     sky, 
-    text="OCEAN EXPLORER - MADE BY MAI GIA LINH", 
+    text="DEEP SEA SIMULATOR - MADE BY MAI GIA LINH", 
     bg="lightblue", 
     fg="white", 
     font=("Courier", 50), 
 ).pack(pady=200, padx=150, anchor="w") 
 
-original_whale_image = tk.PhotoImage(file="humpback_whale.png") 
+# ------------------------------------------------------
+original_whale_image = tk.PhotoImage(file="image/humpback_whale.png") 
 scaled_whale_image = original_whale_image.subsample(2, 2) 
 
-original_whale1_image = tk.PhotoImage(file="blue_whale.png") 
+original_whale1_image = tk.PhotoImage(file="image/blue_whale.png") 
 scaled_whale1_image = original_whale1_image.subsample(2, 2) 
 
-original_bottlenose_image = tk.PhotoImage(file="bottlenose_dolphin.png")
+original_bottlenose_image = tk.PhotoImage(file="image/bottlenose_dolphin.png")
 scaled_bottlenose_image = original_bottlenose_image.subsample(3, 3)
 
-original_flying_fish_image = tk.PhotoImage(file="flying_fish.png")
+original_flying_fish_image = tk.PhotoImage(file="image/flying_fish.png")
 scaled_flying_fish_image = original_flying_fish_image.subsample(4, 4)
 
-original_orca_image = tk.PhotoImage(file="orca.png")
+original_orca_image = tk.PhotoImage(file="image/orca.png")
 scaled_orca_image = original_orca_image.subsample(3, 3)
 
-original_mola_image = tk.PhotoImage(file="mola.png")
+original_mola_image = tk.PhotoImage(file="image/mola.png")
 scaled_mola_image = original_mola_image.subsample(3, 3)
 
-original_coelacanth_image = tk.PhotoImage(file="coelacanth.png")
+original_coelacanth_image = tk.PhotoImage(file="image/coelacanth.png")
 scaled_coelacanth_image = original_coelacanth_image.subsample(4, 4)
 
-original_lantern_fish_image = tk.PhotoImage(file="lantern_fish.png")
+original_lantern_fish_image = tk.PhotoImage(file="image/lantern_fish.png")
 scaled_lantern_fish_image = original_lantern_fish_image.subsample(4, 4)
 
-original_great_white_shark_image = tk.PhotoImage(file="great_white.png")
+original_great_white_shark_image = tk.PhotoImage(file="image/great_white.png")
 scaled_great_white_shark_image = original_great_white_shark_image.subsample(3, 3)
 
-original_whale_shark_image = tk.PhotoImage(file="whale_shark.png")
+original_whale_shark_image = tk.PhotoImage(file="image/whale_shark.png")
 scaled_whale_shark_image = original_whale_shark_image.subsample(3, 3)
+# ------------------------------------------------------
 
 for i in range(1, 11): 
     current_depth = i * 100 
